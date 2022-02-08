@@ -1,0 +1,64 @@
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  padding: 5px;
+}
+:root {
+  --_spacer: var(--size-3);
+}
+.container {
+  box-shadow: var(--shadow-4);
+}
+
+.flow {
+  display: grid;
+  gap: var(--_spacer);
+}
+
+.media-scroller {
+  padding: var(--_spacer);
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 21%;
+  gap: var(--_spacer);
+  overflow-x: auto;
+  /* overscroll-behavior-inline: contain; */
+}
+
+.media-element {
+  padding: var(--_spacer);
+  background-color: var(--surface-2);
+}
+
+.media-element > img {
+  inline-size: 100%;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+.media-element > img {
+  word-break: break-word;
+}
+
+.snap-inline {
+  scroll-snap-type: inline mandatory;
+}
+
+.snap-inline > * {
+  scroll-snap-align: start;
+}
+
+.scroller-groups {
+  border: 2px solid hotpink;
+  grid-auto-columns: 100%;
+}
+
+.group {
+  border: 2px solid lightgreen;
+  display: grid;
+  grid-auto-flow: column;
+}
